@@ -320,56 +320,34 @@
     <div class="row">
         <div class="col-md-1 "></div>
         <div class="col-md-1 "></div>
+
         <div class="col-md-3">
-              <div class="col-md-3">
-                <div class="cardotz d-none d-lg-block" style="margin-left: -40px">
-                    <div class="row-md-1 "></div>
-                    <div class="row-md-5 ">
-                        <img class="otz-card-item-img"
-                             src="{% static 'main/image/slieder/otz/Ellipse 21.png' %}">
-                        <div class="row-md-1 ">
-                            <p class="otz-card-item-name">Катя</p>
-                        </div>
+            <div class="col-md-3" style="display: inline-block">
+                {% block card_otz_1 %}
+                    {% for el in my_record %}
+                        <div class="cardotz d-none d-lg-block " style="margin-left: -20px">
+                            <div class="row-md-1 "></div>
+                            <div class="row-md-5 ">
+                                <img class="otz-card-item-img"
+                                     src={{el.image}}>
+                                <div class="row-md-1 ">
+                                    <p class="otz-card-item-name"> {{ el.title }} </p>
+                                </div>
 
-                        <div class="row-md-5 ">
-                            <p class="otz-card-item-opisanie">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore.
-                            </p>
-                        </div>
-                    </div>
+                                <div class="row-md-5 ">
 
-                </div>
+                                    <p class="otz-card-item-opisanie">{{ el.description }}</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endblock %}
             </div>
 
         </div>
-
-
-        <div class="col-md-3">
-            <div class="col-md-3">
-
-                <div class="cardotz d-none d-lg-block " style="margin-left: -20px">
-                    <div class="row-md-1 "></div>
-                    <div class="row-md-5 ">
-                        <img class="otz-card-item-img"
-                             src="{% static 'main/image/slieder/otz/Ellipse 22.png' %}">
-                        <div class="row-md-1 ">
-                            <p class="otz-card-item-name">Анна</p>
-                        </div>
-
-                        <div class="row-md-5 ">
-                            <p class="otz-card-item-opisanie">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-          <div class="col-md-3">
+       <!-- <div class="col-md-3">
             <div class="col-md-3">
                 <div class="cardotz">
                     <div class="row-md-1 "></div>
@@ -393,7 +371,7 @@
                 </div>
             </div>
 
-        </div>
+        </div>-->
 
     </div>
 </section>
