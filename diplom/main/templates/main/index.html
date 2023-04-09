@@ -4,7 +4,7 @@
 <head>
     <script src="{% static 'main/js/скорллинг.js' %}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'main/css/2.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -67,16 +67,18 @@
     <div class="col-md-6 ">
         <ol class="menuhed">
             <li>
-                <button> <a style=" text-decoration: none; color: #A49799;" href="#zagolovokonas">о нас</a></button>
+                <button><a style=" text-decoration: none; color: #A49799;" href="#zagolovokonas">о нас</a></button>
             </li>
             <li>
-                <button><a style=" text-decoration: none; color: #A49799;" href="#zagolovokassorti">ассортимент</a></button>
+                <button><a style=" text-decoration: none; color: #A49799;" href="#zagolovokassorti">ассортимент</a>
+                </button>
             </li>
             <li>
-                <button ><a style=" text-decoration: none; color: #A49799;" href="#zagolovokdostavka">доставка</a></button>
+                <button><a style=" text-decoration: none; color: #A49799;" href="#zagolovokdostavka">доставка</a>
+                </button>
             </li>
             <li>
-                <button ><a style=" text-decoration: none; color: #A49799;" href="#zagolovokotz">отзовы</a></button>
+                <button><a style=" text-decoration: none; color: #A49799;" href="#zagolovokotz">отзовы</a></button>
             </li>
         </ol>
     </div>
@@ -103,7 +105,8 @@
 <div class="row">
     <div class="col-md-2 "></div>
     <div class="col-md-6 ">
-        <button id="buttonassortiment"><a style=" text-decoration: none; color: white;" href="#zagolovokassorti">Ассортимент</a></button>
+        <button id="buttonassortiment"><a style=" text-decoration: none; color: white;" href="#zagolovokassorti">Ассортимент</a>
+        </button>
     </div>
     <div class="col-md-1 "><img id="handwithwhitecake"
                                 src="{% static 'main/image/header/34342d9e-f40c-493f-8cac-c0c7781cacc3%20(1)-PhotoRoom%201.png' %}">
@@ -170,100 +173,49 @@
     <div class="col-md "></div>
 </div>
 
-<section style="margin-top: 60px; margin-left: 30px">
+<section style="margin-top: 60px;">
 
     <div class="row">
-        <div class="col-md-1 "></div>
-        <div class="col-md-2 ">
-            <div class="cardo">
-                <div class="row-md-1 ">
-                    <p class="card-item-cena">2300р/кг</p>
-                </div>
-                <div class="row-md-1 ">
-                    <p class="card-item-name">Кофе-Горький
-                        шоколад</p>
-                </div>
-                <div class="row-md-5 ">
-                    <img class="card-item-img"
-                         src="{% static 'main/image/slieder/pie1.png' %}">
-                </div>
-                <div class="row-md-5 ">
-                    <p class="card-item-opisanie">
-                        Сочный шоколадный бисквит с ароматным шоколадным чизкейком, кофейное кремю и вкуснейший
-                        шоколадный крем с кофейными
-                    </p>
-                </div>
-                <div class="row-md-1 ">
-                    <button class="card-item-button">ОФОРМИТЬ ЗАКАЗ</button>
+        <div class="row-md-3">
+            <div>
+                {% block card_assort %}
 
+                    <div class="row-md-3" style="float: left; display: inline-flex; margin-left: 9%">
+                        {% for el in my_record_assort %}
 
-                </div>
+                            <div class="cardo ">
+                                <div class="row-md ">
+                                    <p class="card-item-cena">{{ el.price }}</p>
+                                </div>
+                                <div class="row-md ">
+                                    <p class="card-item-name">{{ el.title }}</p>
+                                </div>
+                                <div class="row-md ">
+                                    <img class="card-item-img"
+                                         src="{{ el.image.url }}">
+                                </div>
+                                <div class="row-md ">
+                                    <p class="card-item-opisanie">
+                                        {{ el.description }}
+                                    </p>
+                                </div>
+                                <div class="row-md-1 ">
+                                    <button class="card-item-button">ОФОРМИТЬ ЗАКАЗ</button>
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+                    </div>
+
+                {% endblock %}
             </div>
-
-        </div>
-        <div class="col-md-1 "></div>
-        <div class="col-md-1">
-            <div class="cardo  d-none d-lg-block">
-                <div class="row-md-2 ">
-                    <p class="card-item-cena">2300р/кг</p>
-                </div>
-                <div class="row-md-1 ">
-                    <p class="card-item-name">Малина-лимон-
-шампанское</p>
-                </div>
-                <div class="row-md-5 ">
-                    <img class="card-item-img"
-                         src="{% static 'main/image/slieder/pie 2.png' %}">
-                </div>
-                <div class="row-md-5 ">
-                    <p  class="card-item-opisanie">
-                        Два вида коржей, пропитанные лимонным сиропом. Сливочный крем
-и два слоя из малины, лимона и  шампанского
-                    </p>
-                </div>
-                <div class="row-md-1 ">
-                    <button class="card-item-button">ОФОРМИТЬ ЗАКАЗ</button>
-
-
-                </div>
-            </div>
-
-        </div>
-        <div class="col-md-2 "></div>
-        <div class="col-md-2">
-            <div class="cardo d-none d-lg-block">
-                <div class="row-md-1 ">
-                    <p class="card-item-cena">2300р/кг</p>
-                </div>
-                <div class="row-md-1 ">
-                    <p class="card-item-name">Кофе-Горький
-                        шоколад</p>
-                </div>
-                <div class="row-md-5 ">
-                    <img class="card-item-img"
-                         src="{% static 'main/image/slieder/807380f2-2c9e-4e5f-bdfb-c43ba8649248 1.png' %}">
-                </div>
-                <div class="row-md-5 ">
-                    <p class="card-item-opisanie">
-                        Сочный шоколадный бисквит с ароматным шоколадным чизкейком, кофейное кремю и вкуснейший
-                        шоколадный крем с кофейными
-                    </p>
-                </div>
-                <div class="row-md-1 ">
-                    <button class="card-item-button">ОФОРМИТЬ ЗАКАЗ</button>
-
-
-                </div>
-            </div>
-
         </div>
     </div>
-
-    <div class="col-md-1 "></div>
-    <div class="row-md-1 ">
-        <button class="button-download">скачать полное меню</button>
+    <button class="button-download">скачать полное меню</button>
     </div>
 </section>
+
 <div class="row">
     <div class="col-md "></div>
     <div class="col-md "></div>
@@ -313,58 +265,38 @@
     <div class="col-md "></div>
     <div class="col-md "></div>
 </div>
-<section style="margin-top: 60px; margin-left: 30px">
+<section style="margin-top: 60px; ">
+    <div class="col-md-2"></div>
     <div class="row">
-        <div class="col-md-1 "></div>
-        <div class="col-md-1 "></div>
-        <div class="col-md-3">
-            <div class="col-md-3">
-                <div class="cardotz d-none d-lg-block" style="margin-left: -40px">
-                    <div class="row-md-1 "></div>
-                    <div class="row-md-5 ">
-                        <img class="otz-card-item-img"
-                             src="{% static 'main/image/slieder/otz/Ellipse 21.png' %}">
-                        <div class="row-md-1 ">
-                            <p class="otz-card-item-name">Катя</p>
-                        </div>
 
+        {% block card_otz_1 %}
+
+            <div class="row-md-3" style="float: left; padding-left: 13%">
+
+                {% for el in my_record %}
+                    <div class="cardotz d-none d-md-block  " style="float: left">
+                        <div class="row-md-1 "></div>
                         <div class="row-md-5 ">
-                            <p class="otz-card-item-opisanie">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore.
-                            </p>
+                            <img class="otz-card-item-img"
+                                 src="{{ el.image.url }}">
+                            <div class="row-md-1 ">
+                                <p class="otz-card-item-name"> {{ el.title }} </p>
+                            </div>
+
+                            <div class="row-md-5 ">
+
+                                <p class="otz-card-item-opisanie">{{ el.description }}</p>
+
+                            </div>
+
                         </div>
                     </div>
+                {% endfor %}
 
-                </div>
             </div>
-
-        </div>
-
-        <div class="col-md-3">
-            <div class="col-md-3">
-                <div class="cardotz d-none d-lg-block " style="margin-left: -20px">
-                    <div class="row-md-1 "></div>
-                    <div class="row-md-5 ">
-                        <img class="otz-card-item-img"
-                             src="{% static 'main/image/slieder/otz/Ellipse 22.png' %}">
-                        <div class="row-md-1 ">
-                            <p class="otz-card-item-name">Анна</p>
-                        </div>
-
-                        <div class="row-md-5 ">
-                            <p class="otz-card-item-opisanie">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        <div class="col-md-3">
+        {% endblock %}
+    </div>
+    <!-- <div class="col-md-3">
             <div class="col-md-3">
                 <div class="cardotz">
                     <div class="row-md-1 "></div>
@@ -372,7 +304,9 @@
                         <img class="otz-card-item-img"
                              src="{% static 'main/image/slieder/otz/Ellipse 23 .png' %}">
                         <div class="row-md-1 ">
+
                             <p class="otz-card-item-name">Лера</p>
+
                         </div>
 
                         <div class="row-md-5 ">
@@ -386,7 +320,7 @@
                 </div>
             </div>
 
-        </div>
+        </div>-->
 
     </div>
 </section>
@@ -434,7 +368,8 @@
                     <button><a style=" text-decoration: none; color: white;" href="#zagolovokonas">о нас</a></button>
                 </li>
                 <li>
-                    <button><a style=" text-decoration: none; color: white;" href="#zagolovokdostavka">доставка</a></button>
+                    <button><a style=" text-decoration: none; color: white;" href="#zagolovokdostavka">доставка</a>
+                    </button>
                 </li>
                 <li>
                     <button><a style=" text-decoration: none; color: white;" href="#zagolovokotz">отзывы</a></button>
