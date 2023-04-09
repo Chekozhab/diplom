@@ -331,7 +331,8 @@
 
     .card-item-opisanie {
         width: 285px;
-        padding-left: 45px;
+        padding-left: 85px;
+        height: 100px;
         font-family: 'Montserrat', sans-serif;
         color: #A49799;
         font-weight: 400;
