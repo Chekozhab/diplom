@@ -212,6 +212,43 @@
             </div>
         </div>
     </div>
+    <div class="row  ">
+        <div class="row-md-3">
+            <div>
+                {% block card_assort_mobile %}
+
+                    <div class="row-md-3" style="float: left; display: inline-flex; margin-left: 2%">
+
+
+                            <div class="cardo d-md-none ">
+                                <div class="row-md  ">
+                                    <p class="card-item-cena">{{ my_record_assort_mobile.price }}</p>
+                                </div>
+                                <div class="row-md ">
+                                    <p class="card-item-name">{{ my_record_assort_mobile.title }}</p>
+                                </div>
+                                <div class="row-md ">
+                                    <img class="card-item-img"
+                                         src="{{ my_record_assort_mobile.image.url }}">
+                                </div>
+                                <div class="row-md ">
+                                    <p class="card-item-opisanie">
+                                        {{ my_record_assort_mobile.description }}
+                                    </p>
+                                </div>
+                                <div class="row-md-1 ">
+                                    <button class="card-item-button"><a style="text-decoration: none; color: #F6C0BF;" href="https://wa.clck.bar/79515176447">ОФОРМИТЬ ЗАКАЗ</a></button>
+                                </div>
+
+                            </div>
+
+
+                    </div>
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
     <button class="button-download"><a  style="text-decoration: none; color: #F6C0BF;" href="https://disk.yandex.ru/mail?hash=0AIb09nT7vvO9zPpPtwewveX%2FN7woG%2B35CrDdUlo6p0jrBd6LitpmZtCNKMr8fqgq%2FJ6bpmRyOJonT3VoXnDag%3D%3D">скачать полное меню</a></button>
     </div>
 </section>
@@ -296,31 +333,35 @@
             </div>
         {% endblock %}
     </div>
-    <!-- <div class="col-md-3">
-            <div class="col-md-3">
-                <div class="cardotz">
-                    <div class="row-md-1 "></div>
-                    <div class="row-md-4 ">
-                        <img class="otz-card-item-img"
-                             src="{% static 'main/image/slieder/otz/Ellipse 23 .png' %}">
-                        <div class="row-md-1 ">
+    <div class="row">
 
-                            <p class="otz-card-item-name">Лера</p>
+        {% block card_otz_mobile %}
 
-                        </div>
+            <div class="row-md-3" style="float: left; padding-left: 13%">
 
+
+                    <div class="cardotz d-md-none  " style="float: left; margin-left: -6%">
+                        <div class="row-md-1 "></div>
                         <div class="row-md-5 ">
-                            <p class="otz-card-item-opisanie">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore.
-                            </p>
+                            <img class="otz-card-item-img"
+                                 src="{{ my_record_mobile.image.url }}">
+                            <div class="row-md-1 ">
+                                <p class="otz-card-item-name"> {{ my_record_mobile.title }} </p>
+                            </div>
+
+                            <div class="row-md-5 ">
+
+                                <p class="otz-card-item-opisanie">{{ my_record_mobile.description }}</p>
+
+                            </div>
+
                         </div>
                     </div>
 
-                </div>
-            </div>
 
-        </div>-->
+            </div>
+        {% endblock %}
+    </div>
 
     </div>
 </section>

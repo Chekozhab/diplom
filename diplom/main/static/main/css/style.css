@@ -3,7 +3,8 @@
         height: 554px;
         margin-top: 104px
     }
-    #zagolovokassorti{
+
+    #zagolovokassorti {
         margin-top: 240px;
     }
 
@@ -536,7 +537,7 @@
         display: none;
     }
 
-    a.telephonnum{
+    a.telephonnum {
         margin-top: 210px;
         position: absolute;
         color: white;
@@ -622,7 +623,7 @@
     #handwithwhitecake2 {
         position: absolute;
         z-index: 1;
-        margin-left: -2%;
+        margin-left: 5%;
         margin-top: 0px;
     }
 
@@ -645,7 +646,7 @@
         width: 136px;
         height: 132px;
         margin-top: 20px;
-        margin-left: 30%;
+        margin-left: 32%;
         margin-bottom: 30px;
         position: relative;
         display: list-item;
@@ -656,8 +657,10 @@
         width: 312px;
         background-color: #F6C0BF;
         border-radius: 10px;
-        margin-left: 8%;
+        margin-left: 9%;
     }
+
+
 
     #creatorksenia {
 
@@ -679,19 +682,24 @@
         font-size: 16px;
         text-align: center;
     }
-    #readmore{
+
+    #readmore {
 
     }
-#zagolovokassorti{
-    margin-top: 1000px;
-    margin-left: 25%;
-}
-#zagolovokdostavka{
-    margin-left: 29%;
-}
-#zagolovokotz{
-    margin-left: 33%;
-}
+
+    #zagolovokassorti {
+        margin-top: 1000px;
+        margin-left: 25%;
+    }
+
+    #zagolovokdostavka {
+        margin-left: 29%;
+    }
+
+    #zagolovokotz {
+        margin-left: 33%;
+    }
+
     #cake {
         display: none;
     }
@@ -856,22 +864,22 @@
     }
 
     .button-download {
-    border-radius: 60px;
-    color: #F6C0BF;
-    font-family: 'Comfortaa', sans-serif;
-    width: 280px;
-    height: 68px;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 20px;
-    border-style: none;
-    padding: 23px;
-    text-shadow: 1px 0 1px #ffffff;
-    box-shadow: -2px -2px 1px #fcd1d1, 2px 2px 1px #cb9695;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-left: 15%;
-    margin-top: 70px;
+        border-radius: 60px;
+        color: #F6C0BF;
+        font-family: 'Comfortaa', sans-serif;
+        width: 280px;
+        height: 68px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        border-style: none;
+        padding: 23px;
+        text-shadow: 1px 0 1px #ffffff;
+        box-shadow: -2px -2px 1px #fcd1d1, 2px 2px 1px #cb9695;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-left: 12%;
+        margin-top: 70px;
     }
 
     .dostavkah {
@@ -899,10 +907,12 @@
         text-align: center;
         padding-top: 31px;
     }
-   #footerbutton{
-       margin-left: 25%;
-       margin-top: 95px;
-   }
+
+    #footerbutton {
+        margin-left: 25%;
+        margin-top: 95px;
+    }
+
     #browncake {
         margin-left: 41px;
         margin-top: -140px;
@@ -954,9 +964,11 @@
         color: #A49799;
 
     }
-#nomhead{
-    display: none;
-}
+
+    #nomhead {
+        display: none;
+    }
+
     .footer {
         margin-top: 90px;
         background: #F6C0BF;
@@ -966,6 +978,7 @@
 
     .cardotz {
         width: 350px;
+        margin-left: -2%;
     }
 
     #fotbrand {
@@ -976,7 +989,7 @@
     }
 
     .row hr {
-       display: none;
+        display: none;
     }
 }
 
@@ -993,8 +1006,9 @@ ol li {
 ol li button {
     border: none;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 
